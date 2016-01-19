@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>basit.js</title>
+
+    <style>
+* { margin: 0;padding: 0;border: 0;outline: 0;font-family: Tahoma}
+#main{ width: 987px; min-height:610px;margin:55px auto ;padding-bottom: 55px;box-shadow: 0 0 13px #c7c7c7; overflow: hidden}
+
+.formFooter, .formColumn{ width: 50%;float: left;overflow: hidden;min-height: 89px;}
+.formFooter { width: 100%; margin-left: 13px;}
+
+label{ float: left;width: 89%;padding: 13px 0 13px 0;margin-left: 5%;font-weight:bold}       
+input, select{ border:1px solid #dddddd; width: 89%;float: left;padding: 13px 0 13px 2%;margin-left: 5%}
+input[type=checkbox]{ height: 34px; width: 34px;margin-bottom: 21px;}
+select{ width: 91%}
+input:focus, select:focus{ border:1px solid #297dc0; box-shadow: 0 2px 5px #c7c7c7;}
+button{ padding: 13px; float: left;margin: 21px 0 0 13px;cursor: pointer; font-weight:bold;color: #fff;}
+button:hover{ opacity: 0.89;}
+
+.colorPrimary { background: #FD9000;} 
+.colorSecondary {background: #093361;} 
+.colorImportant { background: #4A289D;}
+
+.colorSuccess {background: #2E8312;} 
+.colorDanger {background: #B81818;}
+.colorWarning {background: #CD6317;}
+.colorInfo {background: #0E5DB5;}
+
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+
+    <script src="jquery.2.1.0.js"></script>
+    <script src="domain.js"></script>
+    <script src="form.js"></script>
+
+    <script>
+        var view = new proje.Entity();
+        load_view.New(view);
+
+        $('#Entity > #btnPrimary').click(function(){
+            console.log($('#Entity').serialize());
+
+            //$.ajax({type: "POST", url: "/domain/entity", data: $('#Entity').serialize()});
+        });
+    </script>
+</body>
+</html>
+
